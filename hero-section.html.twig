@@ -1,0 +1,13 @@
+
+      <div class="col-md-6 p-5">
+        {{ title_prefix }}
+        {% if label %}
+          <h2{{ title_attributes.addClass('animate__animated animate__fadeInLeftBig animate__delay-2s') }}>{{ label }}</h2>
+        {% endif %}
+        {{ title_suffix }}
+        <div class="lead animate__animated animate__fadeInLeftBig animate__delay-2s">{{ content.body }}</div>
+        <div><a href="{{ content.field_button[0]['#url'] }}" class="btn btn-warning animate__animated animate__fadeInLeftBig animate__delay-2s">{{ content.field_button[0]['#title'] }}</a></div>
+      </div>
+      <div class="col-md-6 p-5 justify-content-center align-items-center">
+        <img class="img-fluid mx-auto d-block animate__animated animate__fadeInRightBig animate__delay-2s" src="{{ file_url(content.field_background_image['#items'].entity.uri.value) }}" alt="Smart Discussion" title="Smart Discussion" />
+      </div>
